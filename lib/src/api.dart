@@ -4,7 +4,7 @@ import 'package:avataaar_image/src/avataaar.dart';
 import 'package:http/http.dart' as http;
 
 class AvataaarsApi {
-  static const _BASE_URL = 'http://d64f8151.ngrok.io/';
+  static const _BASE_URL = 'http://34.93.92.140:3000/';
 
   String getUrl(Avataaar avatar, double width) {
     final params = avatar.pieceEntries.map((it) {

@@ -11,7 +11,7 @@ class AvataaarsApi {
       final key = it.key[0].toLowerCase() + it.key.substring(1);
       return '$key=${it.value}';
     }).join('&');
-    return '$_BASE_URL/$width?$params';
+    return '$_BASE_URL?$params';
   }
 
   Future<Uint8List> getImage(Avataaar avatar, double width) =>

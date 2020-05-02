@@ -15,7 +15,7 @@ class Avataaar implements AvataaarPart {
   });
 
   Avataaar.random({
-    Top top,
+//    Top top,
 //    Clothes clothes,
     Eyes eyes,
     Eyebrow eyebrow,

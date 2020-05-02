@@ -6,7 +6,7 @@ import 'parts/parts.dart';
 
 class Avataaar implements AvataaarPart {
   Avataaar({
-    this.top,
+//    this.top,
     this.eyes,
     this.eyebrow,
     this.mouth,
@@ -23,7 +23,7 @@ class Avataaar implements AvataaarPart {
     Skin skin,
     Style style,
   }) : this(
-          top: top ?? Top.random,
+//          top: top ?? Top.random,
 //          clothes: clothes ?? Clothes.random,
           eyes: eyes ?? Eyes.random,
           eyebrow: eyebrow ?? Eyebrow.random,
@@ -32,7 +32,7 @@ class Avataaar implements AvataaarPart {
           style: style ?? Style.random,
         );
 
-  final Top top;
+//  final Top top;
 //  final Clothes clothes;
   final Eyes eyes;
   final Eyebrow eyebrow;
@@ -47,7 +47,7 @@ class Avataaar implements AvataaarPart {
 
   @override
   List<AvataaarPart> get pieces =>
-      [top, eyes, eyebrow, mouth, skin, style];
+      [ eyes, eyebrow, mouth, skin, style];
 
   MapEntry<String, String> _splitEnum<T>(T enumValue) {
     final split = enumValue.toString().split('\.');
@@ -60,7 +60,7 @@ class Avataaar implements AvataaarPart {
       AvataaarConverter().fromMap(json.decode(value));
 
   Avataaar copyWith({
-    Top top,
+//    Top top,
 //    Clothes clothes,
     Eyes eyes,
     Eyebrow eyebrow,
@@ -69,7 +69,7 @@ class Avataaar implements AvataaarPart {
     Style style,
   }) =>
       Avataaar(
-        top: top ?? this.top,
+//        top: top ?? this.top,
 //        clothes: clothes ?? this.clothes,
         eyes: eyes ?? this.eyes,
         eyebrow: eyebrow ?? this.eyebrow,
@@ -83,7 +83,7 @@ class Avataaar implements AvataaarPart {
       identical(this, other) ||
       other is Avataaar &&
           runtimeType == other.runtimeType &&
-          top == other.top &&
+//          top == other.top &&
 //          clothes == other.clothes &&
           eyes == other.eyes &&
           eyebrow == other.eyebrow &&
@@ -93,7 +93,7 @@ class Avataaar implements AvataaarPart {
 
   @override
   int get hashCode =>
-      top.hashCode ^
+//      top.hashCode ^
 //      clothes.hashCode ^
       eyes.hashCode ^
       eyebrow.hashCode ^
@@ -105,7 +105,7 @@ class Avataaar implements AvataaarPart {
 class AvataaarConverter extends Converter<Avataaar> {
   @override
   Avataaar fromMap(Map<String, dynamic> map) => Avataaar(
-        top: TopConverter().fromMap(map['top']),
+//        top: TopConverter().fromMap(map['top']),
 //        clothes: ClothesConverter().fromMap(map['clothes']),
         eyebrow: EyebrowConverter().fromMap(map['eyebrow']),
         eyes: EyesConverter().fromMap(map['eyes']),
@@ -116,7 +116,7 @@ class AvataaarConverter extends Converter<Avataaar> {
 
   @override
   Map<String, dynamic> toMap(Avataaar value) => {
-        'top': TopConverter().toMap(value.top),
+//        'top': TopConverter().toMap(value.top),
 //        'clothes': ClothesConverter().toMap(value.clothes),
         'eyebrow': EyebrowConverter().toMap(value.eyebrow),
         'eyes': EyesConverter().toMap(value.eyes),
